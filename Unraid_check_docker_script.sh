@@ -12,9 +12,7 @@ echo
  if [ "$remove_orphaned_images" == "yes"  ] ; then
     echo "Removing orphaned images..."
     echo
-    docker rmi $(docker images --quiet --filter "dangling=true")
-    echo
-    echo "If you see an error above then there were no orphaned images to remove"
+    docker image prune -af
   else
     echo "Not removing orphaned images (this can be set in script if you want to)"
   fi
@@ -24,7 +22,7 @@ echo
 if [ "$remove_unconnected_volumes" == "yes"  ] ; then
     echo "Removing unconnected docker volumes"
     echo
-    docker volume prune
+    docker volume prune -f
   else
     echo "Not removing unconnected docker volumes (this can be set in script if you want to)"
   fi
