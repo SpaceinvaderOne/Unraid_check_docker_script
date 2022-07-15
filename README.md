@@ -5,7 +5,7 @@ This script is to help troubleshoot why an Unraid docker image is getting too bi
 
 The script when run will 
 1. Show how much total space your Docker images, containers and volumes are taking up.
-2. Shows how mcuh space each container is taking up (both writable layer and combined read/writable layer size)
+2. Shows how much space each container is taking up (both writable layer and combined read/writable layer size)
 3. Will list container size in order from highest to lowest size
 4. Shows each docker volume, its size and which container it is connected to
 5. Can be set to remove both orphaned images and unconnected docker volumes when run.
